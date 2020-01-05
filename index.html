@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <h1 style="font-size:60px; text-align:center;">今天晚上吃什么？</h1>
+  </head>
+  <body>
+    <div style="text-align:center;">
+      <button type="button" onclick="showText()" style="font-size:60px; width:20%; height:100px;">获取方案</button>
+    </div>
+    <br><br>
+    <div id="content" style="font-size:60px; text-align:center;"></div>
+    <script>
+      function showText() {
+        // hardcode options, use database in the future
+        var options = [
+        "滋味成都",
+        "mo-mo-paradise",
+        "馋猫烤鱼",
+        "姜虎东烤肉",
+        "一幸舍",
+        "山城辣妹子",
+        "眉州东坡",
+        "滋味小面",
+        "太二酸菜鱼",
+        "巴国布衣",
+        "锦城里",
+        "鹿鼎记",
+        "小龙坎火锅",
+        "老街漫烤",
+        ]
+        var item = options[Math.floor(Math.random()*options.length)]
+        document.getElementById("content").innerHTML = "今天吃" + item + "！";
+      }
+    </script>
+  </body>
+</html>
