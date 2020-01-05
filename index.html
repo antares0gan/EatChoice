@@ -9,7 +9,9 @@
     <br><br>
     <div id="content" style="font-size:60px; text-align:center;"></div>
     <script>
+      var click = 0;
       function showText() {
+        click += 1;
         // hardcode options, use database in the future
         var options = [
         "滋味成都",
@@ -29,6 +31,9 @@
         ]
         var item = options[Math.floor(Math.random()*options.length)]
         document.getElementById("content").innerHTML = "今天吃" + item + "！";
+        if (click >= 3) {
+          alert("要不再喝个奶茶？")
+        }
       }
     </script>
   </body>
