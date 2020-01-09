@@ -31,8 +31,14 @@
         "老街漫烤",
         "大盛烧烤"
         ]
-        var item = options[Math.floor(Math.random()*options.length)]
-        document.getElementById("content").innerHTML = "今天吃" + item + "！";
+        var i = 0;
+        while (i<10) {
+          setTimeout(function() {
+            var item = options[Math.floor(Math.random()*options.length)]
+            document.getElementById("content").innerHTML = "今天吃" + item + "！";
+          }, 30*i);
+          i++;
+        }
         if (click % 10 == 0) {
           alert("好了，吃太多会胖的！")
         }
